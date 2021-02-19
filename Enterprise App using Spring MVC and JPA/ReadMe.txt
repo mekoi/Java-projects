@@ -1,0 +1,1 @@
+DigiTel web app implements the CRUD using Spring MVC and JPA tools.

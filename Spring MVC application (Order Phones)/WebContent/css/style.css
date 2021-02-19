@@ -1,0 +1,119 @@
+ @charset "UTF-8";
+ 
+* {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      body {
+        padding: 20px;
+      }
+      form {
+        width: 700px;
+        margin: 0 auto;
+      } 
+      h1 {
+        font-size: 40px;
+        color: gray;
+      }      
+      .heading {
+        padding: 5px;
+        background: rgb(187, 187, 187);
+        width: 100%;
+        margin: 10px 0;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+      }
+      .group-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      .group-wrapper.col {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+      .group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 20px;
+      }
+      .group.row {
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+      label {
+        opacity: 0.6;
+        margin-right: 20px;
+      }
+      input {
+        width: 150px;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        padding-left: 5px;
+        margin: 5px 0;
+      }
+      input[type="number"] {
+        height: 20px;
+        text-align: end;
+      }
+      input.s {
+        width: 75px;
+      }
+      input.xl {
+        width: 300px;
+      }
+       input.invalid {
+       	border:1px solid red;
+      }
+      select {
+        width: 150px;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        padding-left: 5px;
+        margin: 5px 0;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      button {
+        padding: 10px 20px;
+        width: 200px;
+        margin-top: 10px;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        background: dodgerblue;
+      } 
+      
+      ul{
+	color:red;
+	}
+	.info{
+		font-size:16px;
+		color:#002db3;
+	}
+	.info-title{
+		color:red;
+		font-size:18px;
+	}
+	.order-greeting{	
+		font-size:22px;
+		color:#002db3;
+	}
+	.info-name{
+		font-size:25px;
+		color:black;
+	}
+	span{
+		margin-left:60px;
+	}
+	.tabbed {
+      padding-left:8.00em;
+     }     

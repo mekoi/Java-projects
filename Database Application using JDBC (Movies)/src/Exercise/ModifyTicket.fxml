@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Exercise.ModifyTicketController">
+   <children>
+      <AnchorPane layoutX="5.0" prefHeight="374.0" prefWidth="668.0">
+         <children>
+            <Label layoutX="25.0" layoutY="58.0" prefHeight="26.0" prefWidth="192.0" text="Location (enter city name)">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="97.0" prefHeight="26.0" prefWidth="231.0" text="Movie Name (enter movie name)">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="136.0" prefHeight="26.0" prefWidth="361.0" text="Ticket Number (enter number  proceeding by char)">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="175.0" prefHeight="26.0" prefWidth="217.0" text="Seat Number (enter number)">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="216.0" prefHeight="26.0" prefWidth="282.0" text="Start time (enter time in 12h format)">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFieldModifyLocation" layoutX="227.0" layoutY="58.0" prefHeight="26.0" prefWidth="131.0" />
+            <TextField fx:id="txtFieldModifyMovieName" layoutX="265.0" layoutY="99.0" prefHeight="26.0" prefWidth="131.0" />
+            <TextField fx:id="txtFieldModifyTicketNumber" layoutX="378.0" layoutY="134.0" prefHeight="26.0" prefWidth="131.0" />
+            <TextField fx:id="txtFieldModifySeatNumber" layoutX="227.0" layoutY="175.0" prefHeight="26.0" prefWidth="131.0" />
+            <TextField fx:id="txtFieldModifyStartTime" layoutX="292.0" layoutY="216.0" prefHeight="26.0" prefWidth="131.0" />
+            <Button fx:id="btnModifyTicket" layoutX="10.0" layoutY="298.0" mnemonicParsing="false" onAction="#modifyTicketButtonPressed" prefHeight="46.0" prefWidth="113.0" text="Modify ticket">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblOperationResult" layoutX="138.0" layoutY="308.0" prefHeight="26.0" prefWidth="511.0" text="Operation result" />
+            <Label layoutX="25.0" layoutY="26.0" prefHeight="26.0" prefWidth="269.0" text="Enter the ticket ID you want to modify:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFieldTicketIdToModify" layoutX="292.0" layoutY="26.0" prefHeight="26.0" prefWidth="131.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<title>Add Ticket</title>
+</head>
+<body class="bg-dark">
+
+<div class="container rounded bg-light mt-3 p-3">
+	<div class="row">
+		<div class="col text-center">
+			<h1>Add Ticket</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container rounded bg-light mt-3 p-3">
+	<div class="row">
+		<div class="col m-5">
+		
+			<form action="#" th:action="@{/add}" th:object="${ticket}" method="post">
+			
+			  <div class="form-group row">
+			    <label for="movieName" class="col-sm-3 col-form-label col-form-label-lg">Movie Name</label>
+			    <div class="col-sm-6">
+			      <input type="text" th:field="*{movieName}" class="form-control form-control-lg" id="movieName" placeholder="Type the Movie Name">
+			      <span th:if="${#fields.hasErrors('movieName')}" th:errors="*{movieName}"></span>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group row">
+			    <label for="customerId" class="col-sm-3 col-form-label col-form-label-lg">Customer ID</label>
+			    <div class="col-sm-6">
+			      <input type="number" th:field="*{customerId}" class="form-control form-control-lg" id="customerId" placeholder="Type the Customer ID">
+			      <span th:if="${#fields.hasErrors('customerId')}" th:errors="*{customerId}"></span>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group row">
+			    <label for="amountPaid" class="col-sm-3 col-form-label col-form-label-lg">Amount Paid</label>
+			    <div class="col-sm-6">
+			      <input type="text" th:field="*{amountPaid}" class="form-control form-control-lg" id="amountPaid" placeholder="Type the Amount Paid">
+			      <span th:if="${#fields.hasErrors('amountPaid')}" th:errors="*{amountPaid}"></span>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group row">
+			    <label for="numberOfTickets" class="col-sm-3 col-form-label col-form-label-lg">Number of Tickets</label>
+			    <div class="col-sm-6">
+			      <input type="number" th:field="*{numberOfTickets}" class="form-control form-control-lg" id="numberOfTickets" placeholder="Maximum of 10 tickets per purchase">
+			      <span th:if="${#fields.hasErrors('numberOfTickets')}" th:errors="*{numberOfTickets}"></span>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group row">
+			    <label for="ticketDate" class="col-sm-3 col-form-label col-form-label-lg">Ticket Date</label>
+			    <div class="col-sm-6">
+			      <input type="text" th:field="*{ticketDate}" class="form-control form-control-lg" id="ticketDate" placeholder="Date as YYYY/MM/DD">
+			      <span th:if="${#fields.hasErrors('ticketDate')}" th:errors="*{ticketDate}"></span>
+			    </div>
+			  </div>
+			  
+			  <!-- min="00:00" max="23:59" -->
+			  <div class="form-group row">
+			    <label for="ticketTime" class="col-sm-3 col-form-label col-form-label-lg">Ticket time</label>
+			    <div class="col-sm-6">
+			      <input type="text" th:field="*{ticketTime}" class="form-control form-control-lg" id="ticketTime" placeholder="Time as hh:mm:ss">
+			      <span th:if="${#fields.hasErrors('ticketTime')}" th:errors="*{ticketTime}"></span>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group row">
+			    <label for="venue" class="col-sm-3 col-form-label col-form-label-lg">Venue</label>
+			    <div class="col-sm-6">
+			      <input type="text" th:field="*{venue}" class="form-control form-control-lg" id="venue" placeholder="Venue">
+			      <span th:if="${#fields.hasErrors('venue')}" th:errors="*{venue}"></span>
+			    </div>
+			  </div>
+			  
+			  <div class="row">
+			  	  <div class="col sm-12 text-center m-3">
+			        <input type="submit" class="btn btn-lg btn-success" value="Add Ticket"> 
+			      </div>
+			  </div>
+			  
+			</form>
+	
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+

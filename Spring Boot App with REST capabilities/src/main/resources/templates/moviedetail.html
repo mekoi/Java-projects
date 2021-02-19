@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Movies Details</title>
+<link rel="stylesheet"
+ href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+ integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+ crossorigin="anonymous">
+</head>
+<body>
+ <div class="container">
+  <div class="row">
+   <table class="table table-responsive table-hover">
+    <thead>
+     <tr>   
+	      <th>Movie Id</th>
+	      <th>Title</th>
+	      <th>Language</th>
+	      <th>Genre</th>
+	      <th>Duration</th>     
+     </tr>
+    </thead>
+    <tbody>
+     <tr th:each="movie : ${movieList}">
+      <td th:text="${movie.movieId}"></td>
+      <td th:text="${movie.movieName}"></td>
+      <td th:text="${movie.movieLanguage}"></td>
+      <td th:text="${movie.movieGenre}"></td>
+      <td th:text="${movie.duration}"></td>
+     </tr>
+    </tbody>
+   </table>
+   <strong><a href="/">Go back</a></strong>
+  </div>
+ </div>
+</body>
+</html>
